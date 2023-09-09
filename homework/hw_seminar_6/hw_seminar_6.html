@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // Задание 1
+        // // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
+        // function cube(number){
+        //     // let result = Math.pow(number, 3);
+        //     // let result = number ** 3;
+        //     let result = number * number * number;
+        //     return result;
+        // }
+        // console.log(cube(2) + cube(3));
+
+
+        // // Задание 2
+        // // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
+        // // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
+        // let number1 = prompt("Введи чило");
+        // if (isNaN(number1)){
+        //     alert("Введены не корректные данные");
+        // } else {
+        //     function taxation(num){
+        //         result = num - (num * 0.13);
+        //         return result;
+        //     }
+        //     console.log(`Размер заработной платы за вычетом налогов равен ${taxation(number1)}`);
+        // }
+
+
+        // // Задание 3
+        // // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
+        // let num_a = prompt("Введи значение 'a'");
+        // let num_b = prompt("Введи значение 'b'");
+        // let num_c = prompt("Введи значение 'c'");
+        // function comparison(num1, num2 , num3){
+        //     let max_num = num1;
+        //     if (max_num < num2){
+        //         max_num = num2;
+        //     }
+        //     if (max_num < num3){
+        //         max_num = num3;
+        //     }
+        //     return max_num
+        // }
+        // console.log(`Mаксимальное значение среди этих чисел: ${comparison(num_a, num_b, num_c)}`);
+
+
+        // Задание 4
+        // Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них):
+        // 1. Сложение
+        // 2. Разность
+        // 3. Умножение
+        // 4. Деление
+        // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6));
+        // должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться).
+        // Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность,
+        // функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны.
+        // Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
+        let num_d = Number(prompt("Введи значение 'a'"));
+        let num_e = Number(prompt("Введи значение 'b'"));
+
+        function summ(a, b){
+            let result = a + b;
+            return result;
+        }
+        function sub(a, b){
+            if (a > b){
+                let result = a - b;
+                return result;
+            } else {
+                let result = b - a;
+                return result;
+            }
+        }
+        function mult(a, b){
+            let result = a * b;
+            return result;
+        }
+        function divis(a, b){
+            let result = a / b;
+            return result;
+        }
+
+        console.log(`Результатом сложения введенных значений будет: ${summ(num_d, num_e)}`);
+        console.log(`Результатом вычетания введенных значений будет: ${sub(num_d, num_e)}`);
+        console.log(`Результатом умножения введенных значений будет: ${mult(num_d, num_e)}`);
+        console.log(`Результатом деления введенных значений будет: ${divis(num_d, num_e)}`);
+    </script>
+</body>
+</html>
